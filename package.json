@@ -3,6 +3,13 @@
 	"displayName": "Keys Counter",
 	"description": "Count how many changes in keys you have made in vscode editor.",
 	"version": "1.0.0",
+	"publisher": "HCl-10",
+	"author": {
+		"name": "Hyperhydrochloric Acid",
+		"email": "HCl_10@outlook.com",
+		"url": "https://github.com/HCl-10"
+	},
+	"license": "WTFPL",
 	"engines": {
 		"vscode": "^1.51.0"
 	},
