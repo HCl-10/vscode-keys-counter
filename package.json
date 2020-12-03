@@ -2,7 +2,7 @@
   "name": "vscode-keys-counter",
 	"displayName": "Keys Counter",
 	"description": "Count how many changes in keys you have made in vscode editor.",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.51.0"
 	},
@@ -12,6 +12,14 @@
 	"activationEvents": [
 		"*"
 	],
+	"homepage": "https://github.com/HCl-10/vscode-keys-counter",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/HCl-10/vscode-keys-counter.git"
+	},
+	"bugs": {
+		"url": "https://github.com/HCl-10/vscode-keys-counter/issues"
+	},
 	"main": "./extension.js",
 	"contributes": {
 		"configuration": {
