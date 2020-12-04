@@ -15,11 +15,11 @@ function activate(context) {
 	fs.readFile(cacheFile, "utf-8", (err, cont) => {
 		if(err) count = 0
 		else count = parseInt(cont)
+		statusBarItem = new StatusBarItem.statusBarItem();
+		const config = vscode.workspace.getConfiguration('vscode-keys-counter');
+		statusBarItem.onDidChangeConfiguration(count, config)
+		documentChangeListenerDisposer = vscode.workspace.onDidChangeTextDocument(onDidChangeTextDocument)
 	})
-	statusBarItem = new StatusBarItem.statusBarItem();
-	const config = vscode.workspace.getConfiguration('vscode-keys-counter');
-	statusBarItem.onDidChangeConfiguration(count, config)
-	documentChangeListenerDisposer = vscode.workspace.onDidChangeTextDocument(onDidChangeTextDocument)
 }
 exports.activate = activate;
 

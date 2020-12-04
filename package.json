@@ -2,7 +2,7 @@
   "name": "vscode-keys-counter",
 	"displayName": "Keys Counter",
 	"description": "Count how many changes in keys you have made in vscode editor.",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"publisher": "HCl-10",
 	"author": {
 		"name": "Hyperhydrochloric Acid",
@@ -34,8 +34,8 @@
 			"properties": {
 				"vscode-keys-counter.customString": {
 					"type": "string",
-					"default": "Keys count: {count}",
-					"description": "The string showed in your keys counter status bar, use {count} to represent the counter."
+					"default": "Keys count: {count}, Speed: {speed} keys/min",
+					"description": "The string showed in your keys counter status bar, use {count} to represent the counter, and {speed} to represent the speed (in keys/min)."
 				}
 			}
 		}
