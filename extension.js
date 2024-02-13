@@ -11,7 +11,7 @@ let cacheFile = ""
 
 function activate(context) {
 	vscode.workspace.onDidChangeConfiguration(onDidChangeConfiguration);
-	cacheFile = os.homedir() + "/.vscode-keys-counter"
+	cacheFile = __dirname + "/.vscode-keys-counter"
 	fs.readFile(cacheFile, "utf-8", (err, cont) => {
 		if(err) count = 0
 		else count = parseInt(cont)
@@ -24,13 +24,13 @@ function activate(context) {
 exports.activate = activate;
 
 function deactivate() {
-	fs.writeFile(cacheFile, count, () => {})
+	fs.writeFile(cacheFile, String(count), () => {})
 }
 
 function onDidChangeTextDocument(event) {
 	++count;
 	if(count % 10 == 0) {
-		fs.writeFile(cacheFile, count, () => {})
+		fs.writeFile(cacheFile, String(count), () => {})
 	}
     statusBarItem.onDidChangeTextDocument(count, event);
 }
